@@ -10,7 +10,10 @@ app.get('/', (req, res) => {
 
 const port = process.env.PORT || 5000;
 
+console.log(process);
+
 if (!process.env.PORT) {
+  console.error('ERROR: No PORT specified');
   throw new Error('PORT is not defined');
 }
 
